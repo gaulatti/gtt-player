@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BBBABE295AF0693F250372D5 /* Pods_GTTPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65B3DDB412BB5B0047762F7 /* Pods_GTTPlayer.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		7169ED102DE608560063F91D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,14 +28,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32590A3D763398C32FEDE89E /* Pods-GTTPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTTPlayer.release.xcconfig"; path = "Target Support Files/Pods-GTTPlayer/Pods-GTTPlayer.release.xcconfig"; sourceTree = "<group>"; };
 		7169ED002DE608540063F91D /* GTTPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GTTPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7169ED0F2DE608560063F91D /* GTTPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GTTPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7169ED192DE608560063F91D /* GTTPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GTTPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B65B3DDB412BB5B0047762F7 /* Pods_GTTPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GTTPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E03657BE833C4932A74E576A /* Pods-GTTPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTTPlayer.debug.xcconfig"; path = "Target Support Files/Pods-GTTPlayer/Pods-GTTPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		71CAA7AD2DE615FE00C6D311 /* Exceptions for "GTTPlayer" folder in "GTTPlayer" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 7169ECFF2DE608540063F91D /* GTTPlayer */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		7169ED022DE608540063F91D /* GTTPlayer */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				71CAA7AD2DE615FE00C6D311 /* Exceptions for "GTTPlayer" folder in "GTTPlayer" target */,
+			);
 			path = GTTPlayer;
 			sourceTree = "<group>";
 		};
@@ -52,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBBABE295AF0693F250372D5 /* Pods_GTTPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E53261CD665CA1D1101B077 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E03657BE833C4932A74E576A /* Pods-GTTPlayer.debug.xcconfig */,
+				32590A3D763398C32FEDE89E /* Pods-GTTPlayer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7169ECF72DE608540063F91D = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +109,8 @@
 				7169ED122DE608560063F91D /* GTTPlayerTests */,
 				7169ED1C2DE608560063F91D /* GTTPlayerUITests */,
 				7169ED012DE608540063F91D /* Products */,
+				5E53261CD665CA1D1101B077 /* Pods */,
+				DFFCB61327C1E513322E81D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +124,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		DFFCB61327C1E513322E81D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B65B3DDB412BB5B0047762F7 /* Pods_GTTPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,9 +139,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7169ED232DE608560063F91D /* Build configuration list for PBXNativeTarget "GTTPlayer" */;
 			buildPhases = (
+				F0F7B04BE85327AB341F693B /* [CP] Check Pods Manifest.lock */,
 				7169ECFC2DE608540063F91D /* Sources */,
 				7169ECFD2DE608540063F91D /* Frameworks */,
 				7169ECFE2DE608540063F91D /* Resources */,
+				D77935828EC0099BB18CEE4D /* [CP] Copy Pods Resources */,
+				4C58002868FC98DE5D9C9CCB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -111,8 +154,6 @@
 				7169ED022DE608540063F91D /* GTTPlayer */,
 			);
 			name = GTTPlayer;
-			packageProductDependencies = (
-			);
 			productName = GTTPlayer;
 			productReference = 7169ED002DE608540063F91D /* GTTPlayer.app */;
 			productType = "com.apple.product-type.application";
@@ -134,8 +175,6 @@
 				7169ED122DE608560063F91D /* GTTPlayerTests */,
 			);
 			name = GTTPlayerTests;
-			packageProductDependencies = (
-			);
 			productName = GTTPlayerTests;
 			productReference = 7169ED0F2DE608560063F91D /* GTTPlayerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -157,8 +196,6 @@
 				7169ED1C2DE608560063F91D /* GTTPlayerUITests */,
 			);
 			name = GTTPlayerUITests;
-			packageProductDependencies = (
-			);
 			productName = GTTPlayerUITests;
 			productReference = 7169ED192DE608560063F91D /* GTTPlayerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -169,7 +206,7 @@
 		7169ECF82DE608540063F91D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
@@ -230,6 +267,69 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C58002868FC98DE5D9C9CCB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GTTPlayer/Pods-GTTPlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D77935828EC0099BB18CEE4D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GTTPlayer/Pods-GTTPlayer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0F7B04BE85327AB341F693B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GTTPlayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7169ECFC2DE608540063F91D /* Sources */ = {
@@ -392,6 +492,7 @@
 		};
 		7169ED242DE608560063F91D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E03657BE833C4932A74E576A /* Pods-GTTPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -399,7 +500,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N32N2U54JS;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -420,6 +522,7 @@
 		};
 		7169ED252DE608560063F91D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32590A3D763398C32FEDE89E /* Pods-GTTPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -427,7 +530,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N32N2U54JS;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

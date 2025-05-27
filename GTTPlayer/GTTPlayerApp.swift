@@ -6,27 +6,26 @@
 //
 
 import SwiftUI
-import SwiftData
+import GoogleCast
 
 @main
 struct GTTPlayerApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
+    // Use UIApplicationDelegateAdaptor to integrate the AppDelegate
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                PlaylistListView()
+                    .tabItem {
+                        Label("Playlists", systemImage: "list.bullet")
+                    }
+                
+                SpringfieldStreamsView()
+                    .tabItem {
+                        Label("Streams", systemImage: "play.tv")
+                    }
+            }
         }
-        .modelContainer(sharedModelContainer)
     }
 }
