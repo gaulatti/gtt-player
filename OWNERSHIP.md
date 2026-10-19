@@ -1,6 +1,6 @@
 # GTT Player ownership and disposition audit
 
-Audit date: 2026-09-07
+Historical audit notes dated: 2026-09-07
 
 Default branch and audited commit: `main` at `66fc324ca1c6ec1fe160c29cc381a373c6e54079`
 
@@ -10,9 +10,17 @@ Default branch and audited commit: `main` at `66fc324ca1c6ec1fe160c29cc381a373c6
 
 No live application, distribution, package, or repository consumer was verified. The repository is an incomplete two-commit prototype whose only external product dependency is the separately owned Springfield service. Source and history remain available for recovery; GitHub archival is a post-merge step so this notice reaches `main` first.
 
-## Evidence
+## Historical audit notes and evidence limits
 
-| Surface | Method | Result |
+The following table preserves the September observations. Their underlying
+GitHub, consumer-search, Apple, local-distribution, HTTP, and build command
+outputs are not retained with this PR and have not been reproduced in the
+2026-10-19 documentation review. They are unverified historical reports, not
+proof of current absence, a passing build, or exhaustive distribution coverage.
+Immutable repository source can establish source contents and missing tracked
+workspace inputs; it cannot establish external installation or ownership.
+
+| Surface | Recorded method | Recorded result (external/build reports unverified) |
 | --- | --- | --- |
 | Git source | GitHub repository, branch, commit, tag, and tree APIs | Public, unarchived repository with one unprotected `main` branch, two commits ending 2025-05-27, no tags, no description, and no homepage. |
 | Application identity | Inspected Xcode project settings and `Info.plist` | iOS application `GTTPlayer`, version 1.0 build 1, bundle identifier `com.gaulatti.ios.GTTPlayer`; no store identifier or release metadata. |
@@ -24,7 +32,7 @@ No live application, distribution, package, or repository consumer was verified.
 | Pages, webhooks, and credentials | GitHub Pages, hooks, Actions secrets, and variables APIs | No Pages site, webhook, Actions secret name, or variable exists. No credential value was requested or read. |
 | Rules and security | Branch-protection and vulnerability-alert APIs | `main` is unprotected and vulnerability alerts are disabled. |
 | Portfolio consumers | Exact local searches under `/Users/gaulatti/source` plus authenticated GitHub code searches for the repository, product, bundle identifier, parser, VLC dependency, and Springfield route | No external application target, import, package reference, documentation link, or copied implementation was found. Matches are confined to this repository. |
-| Apple distribution | Public App Store lookup for the exact bundle identifier | No public App Store application exists. |
+| Apple distribution | Public App Store lookup for the exact bundle identifier | The dated lookup reportedly returned no result; this does not establish universal public absence or exclude private distribution. |
 | Local distribution artifacts | Searched local Xcode Archives and installed simulator application metadata for the product/bundle identifier | No archive or simulator installation was found. |
 | External runtime | Resolved the hard-coded Springfield hostname and sent only `GET /streams` | The hostname resolves, but the HTTPS route returns 502. Springfield is a separate service dependency, not evidence that GTT Player is installed or distributed. No POST or DELETE was sent. |
 | Cloud/package surface | Source and portfolio identifier search | The repository defines no server infrastructure, cloud resource, package manifest, DNS name for itself, or package/store publication path. |
@@ -40,7 +48,7 @@ After this audit:
 - no application source, Xcode setting, dependency declaration, signing identity, external service, or historical commit is changed;
 - no executable deployment or scheduled workflow exists to disable.
 
-## Validation
+## Historical validation notes (not current-run receipts)
 
 | Check | Result |
 | --- | --- |
@@ -58,7 +66,10 @@ After this audit:
 - External developer machines or private artifacts were not inventoried.
 - Springfield's current ownership, authorization, and retention contracts are outside this repository audit.
 
-These unknowns are not a current delivery contract. The post-merge archive follow-up must refresh GitHub and public distribution state and stop if new ownership evidence appears.
+These unknowns establish neither a current delivery contract nor universal
+absence. Before changing the repository archive setting, the owner must refresh
+GitHub and distribution state, retain the results, and stop if ownership or a
+recovery dependency appears. Merging this documentation does not archive it.
 
 ## Recovery contract
 
